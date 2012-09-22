@@ -1,0 +1,51 @@
+# Program:
+# 		creates by Vane .
+# History:
+# 		2012/08/23	Vane	Jorjin release
+
+connect device by ADB tool and follow below action:
+$ ./env-set-up-tool
+it will auto push all scripts and tools to your device.
+
+===========================================================================
+$ adb shell
+enter device.
+
+$ cd /system/etc/wifi/test/
+cd to your test folder.
+
+$ ./MENU.sh
+execute the menu script to check environment. 
+or you can also execute one script only.
+--> throughput.sh, wifi.sh, auto-calibration.sh, bt.sh, bt_4_trx.sh
+===========================================================================
+"script"
+_________________________________________________________________________________________________________
+| [wifi.sh]					include "calibration" "CTX" "CRX" "CW"
+_________________________________________________________________________________________________________
+| [throughput.sh]			use "iw" tool to control wifi test TX/RX , now only support "open security".
+_________________________________________________________________________________________________________
+| [auto-calibration.sh]		this is for special calibration action.
+_________________________________________________________________________________________________________
+| [bt.sh]					it just make BT enter Test mode.
+_________________________________________________________________________________________________________
+| [bt_4_trx.sh]				please make sure your module have BT4.0 function first.
+|							BT 4.0 can't use test mode, it can test its "CTX" and "CRX" only.
+_________________________________________________________________________________________________________
+
+"teTool"
+_____________________________________
+| busybox
+_____________________________________
+| iperf
+_____________________________________
+| R5_iw/iw
+_____________________________________
+| sh
+_____________________________________
+| TQS_D_1.7_WG7550_NLCP.ini
+_____________________________________
+| TQS_S_2.6_WG7310_WG7311_NLCP.ini
+_____________________________________
+| TQS_S_2.6_WG7500_NLCP.ini
+_____________________________________

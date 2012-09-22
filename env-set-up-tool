@@ -1,0 +1,38 @@
+#! /bin/bash
+# Program:
+# 		creates by Vane .
+# History:
+# 		2012/08/23	Vane	Jorjin release
+
+
+chmod 777 ./*.sh
+mkdir ./script
+
+if [ ! -d 'script' -o ! -d 'teTool' ]; then
+echo "No script or teTool Folder !!"
+exit
+fi
+
+cp -r ./*.sh script/
+cp setenv script/
+echo "copy all sh to script"
+
+#while [ "${RTCHECK}" == "error:" ]; do
+#	RTCHECK=$( adb root | grep 'error:' )
+#done
+#echo "test OK"
+#exit
+adb root
+adb remount
+echo "ADB re-mount!!"
+adb shell mkdir /system/bin/teTool
+adb push script /system/etc/wifi/test/
+#adb shell test -f /system/bin/busybox.bak && echo "Busybox already backup" || adb shell mv /system/bin/busybox /system/bin/busybox.bak | adb push teTool/busybox /system/bin/busybox
+#adb shell ls /system/bin/busybox.bak; echo $?
+#if [ $? ]; then
+adb push teTool/busybox /system/bin/busybox
+adb push teTool/sh /system/bin/teTool/sh
+adb push teTool/iperf /system/bin/
+adb push teTool/R5_iw/iw /system/bin/iw
+adb push teTool/MTSINI /system/etc/wifi/MTSINI
+rm -r ./script

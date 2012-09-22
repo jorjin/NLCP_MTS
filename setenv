@@ -1,0 +1,26 @@
+# Program:
+# 		creates by Vane .
+# History:
+# 		2012/08/23	Vane	Jorjin release
+
+TARGET_NVS_DIR=/system/etc/firmware/ti-connectivity
+TARGET_NVS_FILE=${TARGET_NVS_DIR}/wl1271-nvs.bin
+TARGET_INI_DIR=/system/etc/wifi/MTSINI
+#RANDOM_MAC=08:00:28:12:34:56	#you can set the MAC which you want to use
+BL="\033[30m" #black
+RE="\033[31m" #red
+GR="\033[32m" #green
+YE="\033[33m" #yellow
+BL="\033[34m" #blue
+PU="\033[35m" #purple
+EM="\033[36m" #emerald
+WH="\033[37m" #white
+HBL="\033[30;1m" #black
+HRE="\033[31;1m" #red
+HGR="\033[32;1m" #green
+HYE="\033[33;1m" #yellow
+HBL="\033[34;1m" #blue
+HPU="\033[35;1m" #purple
+HEM="\033[36;1m" #emerald
+HWH="\033[37;1m" #white
+NO="\033[0m" #reduction
